@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+input,
+textarea,
+select {
+  @apply border border-gray-200 rounded-md px-1 w-full mb-2;
+}
+
+input:focus,
+textarea:focus,
+select:focus
+ {
+  @apply border-blue-900;
+}
+
+h1 {
+  @apply text-blue-900 mb-2 text-xl;
+}
+
+label {
+  @apply text-blue-900;
+}
+
+.btn-primary {
+  @apply bg-violeta text-white rounded-sm py-1 px-5
+}
+
+table.basic {
+  @apply w-full border-gray-100
+}
+
+table.basic thead tr td {
+  @apply bg-white text-gray-500 font-bold uppercase text-center 
+}
+
+table.basic tr td {
+  @apply bg-white border-b p-1 border-gray-100 text-center capitalize
+}
+
+table.basic a {
+  @apply text-sm py-2  inline-flex gap-1 mr-2 ;
+}
+table.basic button{
+  @apply inline-flex ;
+}
+
+.btn-red {
+  @apply  bg-red-200 text-red-600  px-4 py-1 rounded-sm shadow-sm flex justify-center items-center
+}
+
+.btn-default {
+  @apply bg-white border-black border border-gray-300   mr-2 flex justify-center items-center
+}
+
+.btn-red, .btn-default {
+  @apply px-5 py-0.5 rounded-sm
+}
+
+input, select{
+  @apply p-3 rounded-sm border-gray-300
+}
+
+select{
+  @apply font-bold
+}
